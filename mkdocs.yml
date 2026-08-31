@@ -1,0 +1,83 @@
+site_name: AWS Beginner's Guide
+site_description: A practical, jargon-free introduction to Amazon Web Services
+site_author: Bhargav Kukadiya
+site_url: https://bhargavkukadiya.github.io/aws-beginner-guide/
+
+repo_name: bhargavkukadiya/aws-beginner-guide
+repo_url: https://github.com/bhargavkukadiya/aws-beginner-guide
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light Mode
+    - scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark Mode
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Account Setup & Free Tier: getting-started/account-setup.md
+      - Global Infrastructure: getting-started/global-infrastructure.md
+  - Core Services:
+      - Compute (EC2, Lambda, Containers): core-services/compute.md
+      - Storage (S3, EBS, EFS): core-services/storage.md
+      - Networking (VPC, Route 53, CloudFront): core-services/networking.md
+      - Databases (RDS, Aurora, DynamoDB): core-services/databases.md
+  - AI & Machine Learning:
+      - Bedrock, Nova & SageMaker: ai-ml/bedrock-sagemaker.md
+  - Security & Monitoring:
+      - Identity & Access Management (IAM): security-monitoring/iam-security.md
+      - Monitoring & Logging: security-monitoring/monitoring-logging.md
+  - Cost & Billing:
+      - Pricing & Cost Management: pricing-cost/pricing-cost.md
+  - Hands-on & Architecture:
+      - AWS CLI Basics: hands-on/aws-cli.md
+      - Beginner Architectures: hands-on/architectures.md
+  - Reference & Next Steps:
+      - Best Practices: reference/best-practices.md
+      - Certifications & Resources: reference/certifications-resources.md

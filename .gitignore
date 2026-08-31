@@ -1,0 +1,30 @@
+# MkDocs build directory
+site/
+
+# Python virtual environment & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+# Sensitive AWS credentials and keys
+*.pem
+*.key
+.aws/
+credentials
+
+# Test outputs
+output.json
+response.json
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
